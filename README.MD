@@ -1,5 +1,5 @@
 
 ## TODO
-[ ] Discuss project
+- [ ] Discuss project
 
-[ ] Add readme
+- [ ] Add readme

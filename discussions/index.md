@@ -1,5 +1,5 @@
-# Обсуждение
+# Discussion
 
-> Какую проблему решает данный проект?
+> What is the purpose of this project?
 
-Здесь должен быть ответ...
+There should be a answer...
