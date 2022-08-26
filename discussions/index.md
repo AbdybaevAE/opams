@@ -21,10 +21,11 @@ I've created a project roadmap [here](roadmap.md). It stands as a start point fo
 
 Product:
 
-1. retailPrice
-2. origin
-3. size
-4. color
-5. availableColors
-6. type
-7. productPlace *(in Shop)*
+| Field Name | Description | Type | Examples | Required |
+|----|----|----|----|----|
+| Retail Price | ? | ? | ? | ? |
+| Origin | ? | ? | ? | ? |
+| Size | ? | ? | ? | ? |
+| Color | ? | ? | ? | ? |
+| Available colors | ? | ? | ? | ? |
+| Place | ? | ? | ? | ? |
