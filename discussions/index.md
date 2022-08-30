@@ -21,11 +21,19 @@ I've created a project roadmap [here](roadmap.md). It stands as a start point fo
 
 Product:
 
-| Field Name | Description | Type | Examples | Required |
-|----|----|----|----|----|
-| Retail Price | ? | ? | ? | ? |
-| Origin | ? | ? | ? | ? |
-| Size | ? | ? | ? | ? |
-| Color | ? | ? | ? | ? |
-| Available colors | ? | ? | ? | ? |
-| Place | ? | ? | ? | ? |
+| Field Name | Description                                               | Type       | Examples | Required |
+|----|-----------------------------------------------------------|------------|----------|----------|
+| Retail Price | selling price of the product                              | BigDecimal | 15.50    | true     |
+| Origin | information about the place from where product is obtained | Object     | Origin   | true     |
+| Size | size of the product if it exists                          | String     | xxl      | false    |
+| Color | Color of the current product                              | String     | "Red"    | false    |
+| Available colors | ?                                                         | ?          | ?        | ?        |  [comment]: <> (I suppose this information we will get in differrent way)
+| Place | place in the shop                                         | String     | "4B"     | false    |
+
+
+
+| Field Name       | Description           | Type   | Examples | Required |
+|------------------|-----------------------|--------|----------|----------|
+| Country          | Country of the origin | String | "Qatar"  | true     |
+| City             | City of the origin    | String | "Doha"   | true     |
+| Shop Id          | id of the shop        | String | "26eg4"  | false    |
