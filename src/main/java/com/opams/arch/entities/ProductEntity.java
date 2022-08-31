@@ -7,32 +7,30 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
-@Entity
 @Getter
 @Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity
+@Table(name = "product")
 public class ProductEntity {
 
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private long productId;
+    @Column(name = "product_id")
+    private Long Id;
+
+    @Column(name = "provider_id")
+    private Long providerId;
 
     @NotNull
     @Positive
+    @Column(name = "retail_price", nullable = false)
     private BigDecimal retailPrice;
 
-    private String size;
+    @Column(name = "image")
+    private String image;   //link to image
 
-    private String color;
+    @ManyToOne(targetEntity = ProductEntity.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "provider_id", referencedColumnName = "provider_id")
+    private ProviderEntity provider;
 
-    private String place;
-
-    private String image;   //base64 string
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    private OriginEntity origin;
-
-    
 }

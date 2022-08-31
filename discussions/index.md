@@ -21,19 +21,22 @@ I've created a project roadmap [here](roadmap.md). It stands as a start point fo
 
 Product:
 
-| Field Name | Description                                               | Type       | Examples | Required |
-|----|-----------------------------------------------------------|------------|----------|----------|
-| Retail Price | selling price of the product                              | BigDecimal | 15.50    | true     |
-| Origin | information about the place from where product is obtained | Object     | Origin   | true     |
-| Size | size of the product if it exists                          | String     | xxl      | false    |
-| Color | Color of the current product                              | String     | "Red"    | false    |
+| Field Name       | Description                                               | Type       | Examples | Required |
+|------------------|-----------------------------------------------------------|------------|----------|----------|
+| Retail Price     | selling price of the product                              | BigDecimal | 15.50    | true     |
+| Origin           | information about the place from where product is obtained| Object     | Origin   | true     |
+| Size             | size of the product if it exists                          | ?          | ?        | ?        |  [comment]: <> (I suppose this information will be in bundles)
+| Color            | Color of the current product                              | ?          | ?        | ?        |  [comment]: <> (I suppose this information will be in bundles)
 | Available colors | ?                                                         | ?          | ?        | ?        |  [comment]: <> (I suppose this information we will get in differrent way)
-| Place | place in the shop                                         | String     | "4B"     | false    |
+| Place            | place in the shop                                         | ?          | ?        | ?        |  [comment]: <> (I suppose this information will be in bundles)
 
 
+Provider:
 
-| Field Name       | Description           | Type   | Examples | Required |
-|------------------|-----------------------|--------|----------|----------|
-| Country          | Country of the origin | String | "Qatar"  | true     |
-| City             | City of the origin    | String | "Doha"   | true     |
-| Shop Id          | id of the shop        | String | "26eg4"  | false    |
+| Field Name              | Description                                | Type   | Examples    | Required |
+|-------------------------|--------------------------------------------|--------|-------------|----------|
+| Country                 | Country of the origin                      | String | "Qatar"     | true     |
+| City                    | City of the origin                         | String | "Doha"      | true     |
+| Provider Name           | id of the provider                         | String | "26eg4"     | true     |
+| Provider Mobile Number  | number of the provider                     | String | "+49176..." | false    |
+| Provider Representative | the name of the agent who represent a firm | String | "Ignat"     | false    |
