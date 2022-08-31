@@ -10,7 +10,6 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class OriginEntity {
@@ -18,7 +17,10 @@ public class OriginEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String country;
+
     private String city;
+
     private String shopId;
 }
