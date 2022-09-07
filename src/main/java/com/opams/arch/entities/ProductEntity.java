@@ -1,6 +1,7 @@
 package com.opams.arch.entities;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -23,6 +24,11 @@ public class ProductEntity {
 
     @NotNull
     @Positive
+    @Column(name = "purchase_price", nullable = false)
+    private BigDecimal purchasePrice;
+
+    @NotNull
+    @Positive
     @Column(name = "retail_price", nullable = false)
     private BigDecimal retailPrice;
 
@@ -30,7 +36,7 @@ public class ProductEntity {
     private String image;   //link to image
 
     @ManyToOne(targetEntity = ProductEntity.class, fetch = FetchType.LAZY)
-    @JoinColumn(name = "provider_id", referencedColumnName = "provider_id")
+    @JoinColumn(name = "provider_id", referencedColumnName = "id")
     private ProviderEntity provider;
 
 }

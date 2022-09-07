@@ -1,32 +1,34 @@
 package com.opams.arch.entities;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "product")
+@Table(name = "provider")
 public class ProviderEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "provider_id")
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "country", nullable = false)
-    private String country;
+    @Column(name = "city_id", nullable = false)
+    private String cityId;
 
-    @Column(name = "city", nullable = false)
-    private String city;
+    @Column(name = "name", nullable = false)
+    private String name;
 
-    @Column(name = "provider_name", nullable = false)
-    private String providerName;
+    @Column(name = "mobile_number", nullable = false)
+    private String mobileNumber;
 
-    @Column(name = "provider_mobile_number")
-    private String providerMobileNumber;
+    @Column(name = "representative")
+    private String representative;
 
-    @Column(name = "provider_representative")
-    private String providerRepresentative;
+    @ManyToOne(targetEntity = ProductEntity.class, fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id", referencedColumnName = "id")
+    private CityEntity provider;
 }
